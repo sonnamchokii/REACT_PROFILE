@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #10b981;
+  --color-dark-bg: #0b0f13;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-dark-bg);
+    color: #cbd5e1;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* These are the specific styles to fix your "plain text" look */
+.nav-container { @apply fixed top-0 w-full z-50 bg-[#0b0f13]/80 backdrop-blur-md border-b border-white/5 px-6 py-4 flex justify-between items-center; }
+.hero-title { @apply text-6xl md:text-8xl font-black text-white tracking-tighter leading-tight; }
+.project-card { @apply bg-white/5 border border-white/10 p-10 rounded-[2rem] hover:border-brand-green/50 transition-all; }
+.btn-primary { @apply px-8 py-4 bg-brand-green text-black font-bold rounded-full hover:scale-105 transition-transform inline-block; }
